@@ -27,12 +27,12 @@ The tidy data set was created based on Hadley Wickham''s tidy data set principle
 
 | Subject | Activity | Measurement | Avg.Value |
 | ------- | -------- | ----------- | --------- |
-| 1 | LAYING | tBodyAcc.mean...X | 0.27995645 |
-| 1 | LAYING | tBodyAcc.mean...Y | -0.01591905 |
-| 1 | LAYING | tBodyAcc.mean...Z | -0.10786256 |
-| 1 | LAYING | tGravityAcc.mean...X | 0.94355044 |
-| 1 | LAYING | tGravityAcc.mean...Y | -0.18421941 |
-| 1 | LAYING | tGravityAcc.mean...Z | -0.05996729 |
+| 1 | LAYING | tBodyAcc.mean...X | 0.22159824 |
+| 1 | LAYING | tBodyAcc.mean...Y | -0.04051395 |
+| 1 | LAYING | tBodyAcc.mean...Z | -0.11320355 |
+| 1 | LAYING | tGravityAcc.mean...X | -0.24888180 |
+| 1 | LAYING | tGravityAcc.mean...Y | 0.70554977 |
+| 1 | LAYING | tGravityAcc.mean...Z | 0.44581772 |
 
 
 ## Using this data set

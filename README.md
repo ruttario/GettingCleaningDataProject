@@ -23,16 +23,16 @@ The project contains the following 5 steps of data processing of the original da
 
 ## Data Set Structure
 
-The tidy data set was created based on Hadley Wickham''s tidy data set principle that each row should be an observation, each column should be an a variable (reference: [http://vita.had.co.nz/papers/tidy-data.pdf](http://vita.had.co.nz/papers/tidy-data.pdf)). Per project requirement 5, making subject, activity, and measurement variables yields a tidy data set with the following structure (showing the first 6 records):
+The tidy data set was created based on Hadley Wickham''s tidy data set principle that each row should be an observation, each column should be an a variable (reference: http://vita.had.co.nz/papers/tidy-data.pdf). Per project requirement 5, making subject, activity, and measurement variables yields a tidy data set with the following structure (showing the first 6 records):
 
 | Subject | Activity | Measurement | Avg.Value |
 | ------- | -------- | ----------- | --------- |
-| 1 | STANDING | tBodyAcc.mean...X | 0.27995645 |
-| 1 | STANDING | tBodyAcc.mean...Y | -0.01591905 |
-| 1 | STANDING | tBodyAcc.mean...Z | -0.10786256 |
-| 1 | STANDING | tGravityAcc.mean...X | 0.94355044 |
-| 1 | STANDING | tGravityAcc.mean...Y | -0.18421941 |
-| 1 | STANDING | tGravityAcc.mean...Z | -0.05996729 |
+| 1 | LAYING | tBodyAcc.mean...X | 0.27995645 |
+| 1 | LAYING | tBodyAcc.mean...Y | -0.01591905 |
+| 1 | LAYING | tBodyAcc.mean...Z | -0.10786256 |
+| 1 | LAYING | tGravityAcc.mean...X | 0.94355044 |
+| 1 | LAYING | tGravityAcc.mean...Y | -0.18421941 |
+| 1 | LAYING | tGravityAcc.mean...Z | -0.05996729 |
 
 
 ## Using this data set

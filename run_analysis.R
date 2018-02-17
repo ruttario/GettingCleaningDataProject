@@ -1,3 +1,6 @@
+library(reshape2)
+library(plyr)
+
 # step 0: read data files
 setwd("/Users/anirutw/Google Drive/DataScience/3 - Getting and Cleaning Data/Project/UCI HAR Dataset")
 xtrain <- read.table("train/X_train.txt", header=F, sep="", stringsAsFactors = F)
@@ -18,7 +21,8 @@ xydata <- xydata[,c(columns2keep, ncol(xydata))]
 # step 3: name activities
 activities <- read.table("activity_labels.txt", header=F, sep="", stringsAsFactors = F)
 col_name_act_id <- colnames(xydata)[ncol(xydata)]
-xydata <- merge(xydata, activities, by.x=col_name_act_id, by.y="V1", all=T, sort=F)
+colnames(activities)[1] <- col_name_act_id
+xydata <- join(xydata, activities, by=col_name_act_id)
 # drop activity ID column
 xydata <- xydata[,colnames(xydata) != col_name_act_id]
 
@@ -34,13 +38,12 @@ subjdata <- c(subjtrain, subjtest)
 xydata2 <- cbind(xydata, subjdata)
 col_name_act_lbl <- colnames(xydata2)[length(xydata2)-1]
 col_name_subj <- colnames(xydata2)[length(xydata2)]
-library(reshape2)
 xydata2 <- melt(xydata2, id=c(col_name_subj, col_name_act_lbl), measure.vars=make.names(features$V2[columns2keep]))
-library(plyr)
 xydata2 <- ddply(xydata2, c(col_name_subj, col_name_act_lbl, "variable"), summarize, avg=ave(value))
 xydata2 <- xydata2 %>% distinct()
 colnames(xydata2) <- c("Subject", "Activity", "Measurement", "Avg.Value")
 write.table(xydata2, "HAR_tidy_AW.txt", sep="\t", quote = F, row.names=F)
 
-datain <- read.table("HAR_tidy_AW.txt", header = TRUE)
-View(datain)
+# to read the file back in
+# datain <- read.table("HAR_tidy_AW.txt", header = TRUE)
+# View(datain)
